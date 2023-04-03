@@ -1,0 +1,41 @@
+/*
+Owner: Jessica Murdoch
+navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_topnav.asp 
+Date April 03, 2023*/
+.navbar {
+  background-color: #24527a; 
+  color:#5dacbd;
+  display:flex;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navlist {
+  list-style: none;
+  float: right;
+  color: #5dacbd; 
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 17px;
+}
+/*End of navbar basics for navbar by Jessica Murdoch*/
+.navlist .list_item {
+  display: inline-block;
+  padding: 16px 8px;
+}
+.navbar a {
+  color:#5dacbd;  
+  text-decoration: none;
+}
+.navbar a:hover {
+  color:  #e0ebeb; 
+  transition: all 0.4s;
+}
+.navlist a.active {
+  background-color: #0f4754;
+  color:  #e0ebeb; 
+}
