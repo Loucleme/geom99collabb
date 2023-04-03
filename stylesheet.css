@@ -1,3 +1,12 @@
+{
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  font-family: Verdana,sans-serif;
+}
+
 /*
 Owner: Jessica Murdoch
 navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_topnav.asp 
@@ -8,16 +17,12 @@ Date April 03, 2023*/
   color:#5dacbd;
   display:flex;
   overflow: hidden;
-  justify-content: space-around;
-  align-items: center;
 }
 .navlist {
   list-style: none;
   float: right;
   color: #5dacbd; 
   padding: 10px 14px;
-  text-decoration: none;
-  font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 17px;
@@ -32,7 +37,6 @@ Date April 03, 2023*/
 }
 .navbar a:hover {
   color:  #e0ebeb; 
-  transition: all 0.4s;
 }
 .navlist a.active {
   background-color: #0f4754;
