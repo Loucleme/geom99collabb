@@ -4,7 +4,7 @@
 }
 body {
   height: 100%;
-  font-family: Verdana,sans-serif;
+  font-family: Verdana;
 }
 
 /*
@@ -13,28 +13,26 @@ navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_to
 Date April 03, 2023*/
 
 .navbar {
-  background-color: #24527a; 
-  color:#5dacbd;
   overflow: hidden;
+  background-color: #333;
 }
-.navlist {
-  list-style: none;
-  float: right;
-  color: #5dacbd; 
-  padding: 10px 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   font-size: 17px;
 }
-.navbar a {
-  color:#5dacbd;  
-  text-decoration: none;
-}
+
 .navbar a:hover {
-  color:  #e0ebeb; 
+  background-color: #ddd;
+  color: black;
 }
-.navlist a.active {
-  background-color: #0f4754;
-  color:  white; 
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 /*End of navbar basics for navbar by Jessica Murdoch*/
