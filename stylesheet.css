@@ -4,13 +4,12 @@ navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_to
 Date April 03, 2023*/
 
 .navbar {
-  overflow: hidden;
-  background-color: #333;
+  background-color: #2E8BC0;
 }
 
 .navbar a {
   float: left;
-  color: #f2f2f2;
+  color: #B1D4E0;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -18,12 +17,12 @@ Date April 03, 2023*/
 }
 
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: #145DA0;
   color: black;
 }
 
 .navbar a.active {
-  background-color: #04AA6D;
+  background-color: #0C2D48;
   color: white;
 }
 /*End of navbar basics for navbar by Jessica Murdoch*/
