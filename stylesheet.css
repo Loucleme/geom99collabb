@@ -4,11 +4,12 @@ navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_to
 Date April 03, 2023*/
 
 .navbar {
+  overflow: hidden;
   background-color: #2E8BC0;
 }
 
 .navbar a {
-  float: left;
+  float: right;
   color: #B1D4E0;
   text-align: center;
   padding: 14px 16px;
