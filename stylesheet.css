@@ -7,8 +7,7 @@ Date April 03, 2023*/
   color:#5dacbd;
   display:flex;
   overflow: hidden;
-  justify-content: space-around;
-  align-items: center;
+  align-items: right;
 }
 
 .navlist {
@@ -22,7 +21,6 @@ Date April 03, 2023*/
   letter-spacing: 2px;
   font-size: 17px;
 }
-/*End of navbar basics for navbar by Jessica Murdoch*/
 .navlist .list_item {
   display: inline-block;
   padding: 16px 8px;
@@ -36,6 +34,7 @@ Date April 03, 2023*/
   transition: all 0.4s;
 }
 .navlist a.active {
-  background-color: #0f4754;
+  background-color: #1b3d5c;
   color:  #e0ebeb; 
 }
+/*End of navbar basics for navbar by Jessica Murdoch*/
