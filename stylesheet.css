@@ -3,12 +3,12 @@ Owner: Jessica Murdoch
 navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_topnav.asp 
 Date April 03, 2023*/
 
-.topnav {
+.navbar {
   overflow: hidden;
   background-color: #333;
 }
 
-.topnav a {
+.navbar a {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -17,12 +17,12 @@ Date April 03, 2023*/
   font-size: 17px;
 }
 
-.topnav a:hover {
+.navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.topnav a.active {
+.navbar a.active {
   background-color: #04AA6D;
   color: white;
 }
