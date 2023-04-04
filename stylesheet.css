@@ -3,7 +3,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 h1 {
   font-family: Georgia, serif;
   font-size: 50px;
@@ -33,6 +32,10 @@ Date April 03, 2023*/
 .navbar {
   overflow: hidden;
   background-color: #2E8BC0;
+  display:flex;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .navbar a {
