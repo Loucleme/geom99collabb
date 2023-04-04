@@ -32,7 +32,6 @@ Date April 03, 2023*/
 .navbar {
   overflow: hidden;
   background-color: #2E8BC0;
-  float: right;
   display:flex;
   overflow: hidden;
   padding: 10px 14px;
