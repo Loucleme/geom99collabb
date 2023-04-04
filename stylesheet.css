@@ -7,6 +7,27 @@ body {
   font-family: Verdana;
 }
 
+h1 {
+  font-family: Georgia, serif;
+  font-size: 50px;
+  color: steelblue;
+}
+
+h2 {
+  font-family: Monaco, serif;
+  font-size: 35px;
+  color: slategray;
+  
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: Black;
+   color: seashell;
+   text-align: Center;
+}
+
 /*
 Owner: Jessica Murdoch
 navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_topnav.asp 
