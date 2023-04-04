@@ -60,3 +60,46 @@ Date April 03, 2023*/
   color: white;
 }
 /*End of navbar basics for navbar by Jessica Murdoch*/
+
+/* Body formatting by Meghan Noonan */ 
+
+.mainbox{
+	padding: 10%;
+}
+.bodybox{
+	background-color: #f5f5f5;
+	padding-right: 3%;
+	padding-left: 3%;
+	padding-bottom: 3%;
+	padding-top: 3%;}
+p{
+	color:gray; 
+   	font-size: 20px;
+    	font-family: Arial, sans-serif;
+    	line-height: 155%;}
+
+  
+.picture{
+	position: relative;
+
+}
+
+img {
+  display: block;
+margin-left: auto;
+margin-right: auto;
+ 
+}
+
+  @media (max-width: 1400px){ /*Responsive */
+	.bodybox{
+		flex-direction: column;
+	  }}
+
+@media (max-width: 900px){
+	.pastprojects, .imgteam{
+		max-width: 100%;
+		padding: 5%;
+	}
+
+}
