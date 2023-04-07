@@ -34,14 +34,15 @@ h2 {
 }
 
 .footerText {
- text-align: center;
+ text-align: left;
 }
 
 .logo {
  float: left;
  padding-top: 7px;
  padding-bottom: 7px;
- margin-left: 75px;
+ padding-left: 550px;
+ padding-right:50px
 }
 
 /*
