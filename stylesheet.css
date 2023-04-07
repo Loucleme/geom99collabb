@@ -24,6 +24,11 @@ h2 {
    text-align: Center;
 }
 
+.logo {
+ text-align: center;
+ top: 10px;
+}
+
 /*
 Owner: Jessica Murdoch
 navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_topnav.asp 
