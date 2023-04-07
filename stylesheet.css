@@ -22,7 +22,7 @@ h2 {
    width: 100%;
    background-color: Black;
    color: seashell;
-   text-align: Center;
+   text-align: center;
 }
 
 .footerFixed {
@@ -41,10 +41,10 @@ h2 {
 }
 
 .logo {
+ text-align: center;
  padding-top: 7px;
  padding-right: 15px;
  padding-bottom: 7px;
- padding-left: 100px;
 }
 
 /*
