@@ -23,6 +23,15 @@ h2 {
    color: seashell;
    text-align: Center;
 }
+.footerFixed {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: Black;
+   color: seashell;
+   text-align: Center;
+}
 
 .logo {
  text-align: center;
