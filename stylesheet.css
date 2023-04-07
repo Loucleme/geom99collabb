@@ -27,8 +27,6 @@ h2 {
 
 .footerFixed {
    position: fixed;
-   align-items: center;
-   justify-content: center;
    left: 0;
    bottom: 0;
    width: 100%;
@@ -41,8 +39,10 @@ h2 {
 }
 
 .logo {
+ float: left;
  padding-top: 7px;
  padding-bottom: 7px;
+ margin-left: 150px;
 }
 
 /*
