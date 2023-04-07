@@ -27,12 +27,17 @@ h2 {
 
 .footerFixed {
    position: fixed;
+   align-items: center;
+   justify-content: center;
    left: 0;
    bottom: 0;
    width: 100%;
    background-color: Black;
    color: seashell;
-   float: right;
+}
+
+.footerText {
+ float: right;
 }
 
 .logo {
