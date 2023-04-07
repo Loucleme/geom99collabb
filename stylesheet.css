@@ -41,9 +41,9 @@ h2 {
 }
 
 .logo {
- text-align: center;
+ float: right;
  padding-top: 7px;
- padding-right: 15px;
+ padding-right: 50px;
  padding-bottom: 7px;
 }
 
