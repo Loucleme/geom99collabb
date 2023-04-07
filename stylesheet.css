@@ -32,11 +32,11 @@ h2 {
    width: 100%;
    background-color: Black;
    color: seashell;
-   text-align: Center;
+   text-align: Left;
 }
 
 .logo {
- padding: 10px;
+ padding: 5px;
 }
 
 /*
