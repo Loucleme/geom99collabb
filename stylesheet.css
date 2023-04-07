@@ -14,6 +14,7 @@ h2 {
   font-size: 35px;
   color: slategray;
 }
+
 .footer {
    position: relative;
    left: 0;
@@ -23,6 +24,7 @@ h2 {
    color: seashell;
    text-align: Center;
 }
+
 .footerFixed {
    position: fixed;
    left: 0;
@@ -36,6 +38,8 @@ h2 {
 .logo {
  text-align: center;
  top: 10px;
+ left: 20px;
+ float: left;
 }
 
 /*
