@@ -27,7 +27,6 @@ h2 {
 
 .footerFixed {
    position: fixed;
-   left: 0;
    bottom: 0;
    width: 100%;
    background-color: Black;
@@ -42,7 +41,7 @@ h2 {
  float: left;
  padding-top: 7px;
  padding-bottom: 7px;
- margin-left: 150px;
+ margin-left: 75px;
 }
 
 /*
