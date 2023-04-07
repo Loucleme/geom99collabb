@@ -37,12 +37,13 @@ h2 {
 }
 
 .footerText {
- float: right;
+ float: left;
 }
 
 .logo {
- padding: 5px;
- float: right;	
+ padding-top: 5px;
+ padding-bottom: 5px;
+ float: left;	
 }
 
 /*
