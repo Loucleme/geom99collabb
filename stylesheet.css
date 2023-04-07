@@ -17,12 +17,10 @@ h2 {
 
 .footer {
    position: relative;
-   left: 0;
    bottom: 0;
    width: 100%;
    background-color: Black;
    color: seashell;
-   text-align: center;
 }
 
 .footerFixed {
