@@ -36,6 +36,12 @@ h2 {
  padding-right:50px
 }
 
+@media (max-width:500px) {
+	.footerFixed, .logo, footerText{
+		display: flex;
+	}
+}
+
 /*
 Owner: Jessica Murdoch
 navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_topnav.asp 
