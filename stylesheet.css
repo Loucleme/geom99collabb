@@ -37,7 +37,7 @@ h2 {
 }
 
 @media (max-width:500px) {
-	.footerFixed, .logo, footerText{
+	.footerFixed, .logo, .footerText{
 		display: flex;
 	}
 }
