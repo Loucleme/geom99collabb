@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="stylesheet" href="stylesheet.css">
-    <title>Esri Leaflet Tutorials: Display a map - Modified to show Carden Alvar</title>
+    <title>JML Cartolytics</title>
 
     <!-- Load Leaflet from CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin="" />
@@ -33,55 +33,120 @@
         font-size: 14px;
         color: #323232;
       }
+       #info-pane {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 400;
+        padding: 1em;
+        background: white;
+      }
     </style>
   </head>
-<!-- Changed to focus on the Carden area with a zoom of 11 to ensure enough of the area is visible including some relevant anthropogenic features for orientation.
+<!-- Changed to focus on the Carden area with a zoom of 13 to ensure enough of the area is visible including some relevant anthropogenic features for orientation.
 Added NCC protected areas layer that was created by querying a protected area GDB for NCC owned areas and uploaded this feature layer to AGOL. Next changed the 
 background basemap to imagery since we will be using remote sensing tech and NCC, in general, displays their maps with a imagery background to help with restoration 
 initiatives. -->
   <body>
-    
+<!--    
 <div class="navbar">
   <a class="active" href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="trials.html">Trials</a>
   <a href="map.html">Solution</a>
 </div>
-    
+--> 
     <div id="map"></div>
-
+    <div id="info-pane" class="leaflet-bar">Hover to Inspect</div>
     <script>
 
       const map = L.map("map", {
         minZoom: 2
       })
 
-      map.setView([44.6425, -79.036], 11); 
+      map.setView([44.6308, -79.0548], 13); 
 
       const apiKey = "AAPKef6c3ee5104e425d91ef8ee2596379ecuNIO6muQJMeheJcqAq6wMV-hjNs94Br8HhqXM19D8IAWQEZ0SdW28lOX99Oblec_";
 
-      const basemapEnum = "ArcGIS:Imagery";
+      const basemapEnum = "ArcGIS:LightGray:Base";
 
       L.esri.Vector.vectorBasemapLayer(basemapEnum, {
         apiKey: apiKey
       }).addTo(map);
       
-      var NCC = L.esri
-       .featureLayer({
-         url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/ProtectedArea_Boundary/FeatureServer/0/"
+      const boundaries = L.esri
+        .featureLayer({
+          url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/ProtectedArea_Boundary/FeatureServer/0/",
+          simplifyFactor: 0.35,
+          precision: 5,
+          fields: ["NAME_E"],
+          style: {
+            color: "#A9A9A9",
+            weight: 1
+          }
+        })
+        .addTo(map);
+      let oldId;
+
+      boundaries.on("mouseout", function (e) {
+        document.getElementById("info-pane").innerHTML = "Hover to Inspect";
+        boundaries.resetFeatureStyle(oldId);
+      });
+
+      boundaries.on("mouseover", function (e) {
+        oldId = e.layer.feature.id;
+        document.getElementById("info-pane").innerHTML = e.layer.feature.properties.NAME_E;
+        boundaries.setFeatureStyle(e.layer.feature.id, {
+          color: "#296b2f",
+          weight: 2,
+          opacity: 1
         });
-
-      NCC.addTo(map);
-
+      });
+      
      // var Carden = L.esri
        //.featureLayer({
         // url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/CardenShapefile/FeatureServer/0/"
        // });
 
       //Carden.addTo(map); Need to figure out way to display this different from the NCC layers or cant display at all 
+      
+      L.control.scale ({
+        metric: true,
+        imperial: false,
+        position: 'bottomleft'
+      }).addTo(map);
+      
+      //Custom marker icons was inspired by MapTiler's Youtube series called "Leafket Tutorial
+      //from https://www.youtube.com/watch?v=wnsEYm9hF0o
+      
+      var customIcon = L.icon({
+        iconUrl: 'https://www.freeiconspng.com/uploads/green-leaf-icon-10.png',
+        iconSize: [15,15],
+
+      })
+        
+      var marker = L.marker([44.6657, -79.0353], {icon: customIcon}).addTo(map);
+      marker.bindPopup("<b> Cedarhurst - NCC Property 140903 </b><br>This is a test.");      
+      
+      var marker1 = L.marker([44.6554, -79.0827], {icon: customIcon}).addTo(map);
+      marker1.bindPopup("<b> Little Bluestem Alvar - NCC Property 140893 </b><br>This is a test.");  
+       
+      var marker2 = L.marker([44.6435, -79.0845], {icon: customIcon}).addTo(map);
+      marker2.bindPopup("<b> Prairie Smoke - NCC Property 140753 </b><br>This is a test."); 
+      
+      var marker3 = L.marker([44.6149, -79.0508], {icon: customIcon}).addTo(map);
+      marker3.bindPopup("<b> McGee Creek - NCC Property 140989 </b><br>This is a test."); 
+            
+      var marker4 = L.marker([44.6094, -79.0398], {icon: customIcon}).addTo(map);
+      marker4.bindPopup("<b> Cranberry Wetlands - NCC Property 142091 </b><br>This is a test."); 
+      
+      var marker5 = L.marker([44.6980, -79.0488], {icon: customIcon}).addTo(map);
+      marker5.bindPopup("<b> North Bear - NCC Property 140894 </b><br>This is a test."); 
+
+      var marker6 = L.marker([44.6280, -79.0561], {icon: customIcon}).addTo(map);
+      marker6.bindPopup("<b> Carden Alvar Provincial Park</b><br>This is a test.");
     </script>
 
   </body>
 
 </html>
-
