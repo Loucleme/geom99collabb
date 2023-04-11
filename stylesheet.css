@@ -26,15 +26,12 @@ Date April 03, 2023*/
 
 
 .navbar {
-  overflow: hidden;
-  background-color: #2E8BC0;
+  background-color: #24527a; 
+  color:#5dacbd;
   display:flex;
   overflow: hidden;
-  padding: 10px 14px;
-  text-decoration: none;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  justify-content: space-around;
+  align-items: center;
 }
 .navlist {
   list-style: none;
@@ -52,28 +49,17 @@ Date April 03, 2023*/
   padding: 16px 8px;
 }
 .navbar a {
-  float: left;
-  color: #f2f2f2;
-  /*text-align: center;*/
-  padding: 14px 16px;
+  color:#5dacbd;  
   text-decoration: none;
-  font-size: 17px;
 }
-
 .navbar a:hover {
-  background-color: #B1D4E0;
-  color: white;
+  color:  #e0ebeb; 
+  transition: all 0.4s;
 }
-
-.navbar a.active {
-  background-color: #145DA0;
-  color: white;
+.navlist a.active {
+  background-color: #0f4754;
+  color:  #e0ebeb; 
 }
-.navbar .GeomSolutions {/*Align name/logo left*/
-    width: 100%;
-    margin-left: 8px;
-    margin-top: 8px;
-  }
 .navbar .CompanyLogo {
   height: 30px;
 }
