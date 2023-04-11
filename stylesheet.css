@@ -14,36 +14,11 @@ h2 {
   font-size: 35px;
   color: slategray;
 }
-
-
-.footerFixed {
-   position: fixed;
-   bottom: 0;
-   width: 100%;
-   background-color: Black;
-   color: seashell;
+h3 {
+ font-family: Monaco, serif;
+  font-size: 100pt;
+  color: white;
 }
-
-.footerText {
- text-align: left;
-}
-
-.logo {
- float: left;
- padding-top: 7px;
- padding-bottom: 7px;
- padding-left: 550px;
- padding-right:50px
-}
-
-@media (max-width:500px) {
-	.footerFixed, .logo, .footerText{
-		display: flex;
-		margin-top: 10px;
-		margin-bottom: 20px;
-	}
-}
-
 /*
 Owner: Jessica Murdoch
 navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_topnav.asp 
@@ -95,6 +70,36 @@ Date April 03, 2023*/
   padding-top: 100px;
 }
 /*End of navbar basics for navbar by Jessica Murdoch*/
+
+
+.footerFixed {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: Black;
+   color: seashell;
+}
+
+.footerText {
+ text-align: left;
+}
+
+.logo {
+ float: left;
+ padding-top: 7px;
+ padding-bottom: 7px;
+ padding-left: 550px;
+ padding-right:50px
+}
+
+@media (max-width:500px) {
+	.footerFixed, .logo, .footerText{
+		display: flex;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+}
+
 
 /* Body formatting by Meghan Noonan */ 
 
