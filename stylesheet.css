@@ -79,6 +79,21 @@ Date April 03, 2023*/
   background-color: #145DA0;
   color: white;
 }
+.header-image {
+  background-position: center;
+  background-size: cover;
+  background-image: url("image-header.jpg");
+  min-height: 100%; 
+  background-repeat: no-repeat ; 
+  position: relative;
+}
+
+.header-image-text {
+  top: 50%;
+  text-align: center;
+  color:#fff;
+  padding-top: 100px;
+}
 /*End of navbar basics for navbar by Jessica Murdoch*/
 
 /* Body formatting by Meghan Noonan */ 
