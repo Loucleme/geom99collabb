@@ -100,6 +100,8 @@ Date April 03, 2023*/
    width: 100%;
    background-color: Black;
    color: seashell;
+   display: flex;
+   justify-content: center;
 }
 
 .footerText {
@@ -108,9 +110,8 @@ Date April 03, 2023*/
 
 .logo {
  float: left;
- padding-top: 7px;
+ padding-top: 10px;
  padding-bottom: 7px;
- padding-left: 550px;
  padding-right:50px
 }
 
