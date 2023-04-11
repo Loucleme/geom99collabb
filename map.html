@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="stylesheet" href="stylesheet.css">
-    <title>JML Cartolytics</title>
+    <title>Carden Alvar - Solution</title>
 
     <!-- Load Leaflet from CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin="" />
@@ -48,14 +48,14 @@ Added NCC protected areas layer that was created by querying a protected area GD
 background basemap to imagery since we will be using remote sensing tech and NCC, in general, displays their maps with a imagery background to help with restoration 
 initiatives. -->
   <body>
-<!--    
+
 <div class="navbar">
-  <a class="active" href="index.html">Home</a>
+  <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="trials.html">Trials</a>
-  <a href="map.html">Solution</a>
+  <a class="active" href="map.html">Solution</a>
 </div>
---> 
+
     <div id="map"></div>
     <div id="info-pane" class="leaflet-bar">Hover to Inspect</div>
     <script>
@@ -64,7 +64,7 @@ initiatives. -->
         minZoom: 2
       })
 
-      map.setView([44.6308, -79.0548], 13); 
+      map.setView([44.6308, -79.0548], 13.5); 
 
       const apiKey = "AAPKef6c3ee5104e425d91ef8ee2596379ecuNIO6muQJMeheJcqAq6wMV-hjNs94Br8HhqXM19D8IAWQEZ0SdW28lOX99Oblec_";
 
@@ -78,7 +78,7 @@ initiatives. -->
         .featureLayer({
           url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/ProtectedArea_Boundary/FeatureServer/0/",
           simplifyFactor: 0.35,
-          precision: 5,
+          precision: 10,
           fields: ["NAME_E"],
           style: {
             color: "#A9A9A9",
@@ -116,7 +116,7 @@ initiatives. -->
         position: 'bottomleft'
       }).addTo(map);
       
-      //Custom marker icons was inspired by MapTiler's Youtube series called "Leafket Tutorial
+      //Custom marker icons was inspired by MapTiler's Youtube series called "Leaflet Tutorial"
       //from https://www.youtube.com/watch?v=wnsEYm9hF0o
       
       var customIcon = L.icon({
