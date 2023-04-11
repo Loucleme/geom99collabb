@@ -26,8 +26,7 @@ Date April 03, 2023*/
 
 
 .navbar {
-  background-color: #24527a; 
-  color:#5dacbd;
+  background-color: #2E8BC0; 
   display:flex;
   overflow: hidden;
   justify-content: space-around;
@@ -53,12 +52,11 @@ Date April 03, 2023*/
   text-decoration: none;
 }
 .navbar a:hover {
-  color:  #e0ebeb; 
-  transition: all 0.4s;
+  color:  #B1D4E0; 
 }
 .navlist a.active {
-  background-color: #0f4754;
-  color:  #e0ebeb; 
+  background-color: #145DA0;
+  color:  white; 
 }
 .navbar .CompanyLogo {
   height: 30px;
@@ -70,6 +68,11 @@ Date April 03, 2023*/
   font-size: 23px;
   font-weight: bold;
 }
+.navbar .JML {/*Align name/logo left*/
+    width: 100%;
+    margin-left: 8px;
+    margin-top: 8px;
+  }
 .header-image {
   background-position: center;
   background-size: cover;
