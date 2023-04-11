@@ -180,6 +180,11 @@ body {
   
   }
   
+
+.center {
+    text-align: center;
+}
+
     @media (max-width: 1400px){ /*Responsive */
       .bodybox{
           flex-direction: column;
