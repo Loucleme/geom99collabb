@@ -55,6 +55,21 @@ Date April 03, 2023*/
   background-color: #145DA0;
   color: white;
 }
+.navbar .GeomSolutions {/*Align name/logo left*/
+    width: 100%;
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+.navbar .CompanyLogo {
+  height: 30px;
+}
+.navbar .CompanyName {
+  color: #e0ebeb; 
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 23px;
+  font-weight: bold;
+}
 .header-image {
   background-position: center;
   background-size: cover;
