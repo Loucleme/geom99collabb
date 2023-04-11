@@ -84,9 +84,10 @@ Date April 03, 2023*/
 
 .header-image-text {
   top: 50%;
-  text-align: center;
   color:#fff;
   padding-top: 100px;
+  display: flex;
+  justify-content: center;
 }
 /*End of navbar basics for navbar by Jessica Murdoch*/
 
