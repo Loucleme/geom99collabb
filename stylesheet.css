@@ -112,7 +112,7 @@ Date April 03, 2023*/
  float: left;
  padding-top: 10px;
  padding-bottom: 7px;
- padding-right:50px
+ padding-right:50px;
 }
 
 @media (max-width:500px) {
