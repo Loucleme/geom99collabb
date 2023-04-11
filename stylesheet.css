@@ -82,6 +82,9 @@ body {
     min-height: 100%; 
     background-repeat: no-repeat ; 
     position: relative;
+   /* make responsive*/
+    width: 100%;
+    height: auto;  
   }
   
   .header-image-text {
