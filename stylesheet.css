@@ -181,8 +181,7 @@ body {
   }
   
    .center1 {
-      display: flex;
-      justify-content: center;
+      text-align: center;
     }
 
     @media (max-width: 1400px){ /*Responsive */
