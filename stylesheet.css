@@ -24,13 +24,6 @@ Owner: Jessica Murdoch
 navbar basic desisn inspiration from https://www.w3schools.com/howto/howto_js_topnav.asp 
 Date April 03, 2023*/
 
-<div class="GeomSolutions"> 
-      <a class="CompanyName" href=index.html>
-        <img class="CompanyLogo" src="logo1.jpg" alt="Company logo">
-      <!-- Logo source: https://pixabay.com/vectors/earth-globe-planets-space-world-2026996/-->
-        JML Cartolytics
-      </a>
-    </div>
 
 .navbar {
   overflow: hidden;
