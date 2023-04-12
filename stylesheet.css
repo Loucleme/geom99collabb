@@ -92,7 +92,10 @@ body {
   }
   /*End of navbar basics for navbar by Jessica Murdoch*/
   
-  
+  .sliderPara {
+      padding-left: 35px;
+}
+
   .footerFixed {
      position: relative;
      bottom: 0;
