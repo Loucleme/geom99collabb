@@ -178,6 +178,9 @@ body {
       text-align: center;
     }
      
+.buttonPosition {
+    justify-content: center;
+}
     .button {
       background-color: #2E8BC0; 
       text-color: white;
@@ -187,6 +190,7 @@ body {
       font-size: 28px;
       margin: 4px 2px;
       cursor: pointer;
+      text-decoration: none;
     }
     
     .button:hover{
