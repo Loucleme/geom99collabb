@@ -47,6 +47,15 @@
         padding: 1em;
         background: white;
       }
+      
+      #info-pane2 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 400;
+        padding: 1em;
+        background: white;
+      }
     </style>
   </head>
 <!-- Changed to focus on the Carden area with a zoom of 13 to ensure enough of the area is visible including some relevant anthropogenic features for orientation.
@@ -54,8 +63,8 @@ Added NCC protected areas layer that was created by querying a protected area GD
 background basemap to imagery since we will be using remote sensing tech and NCC, in general, displays their maps with a imagery background to help with restoration 
 initiatives. -->
   <body>
-    <p> Carden Alvar Slider<p>
-    <input id="slide" type="range" min="0" max="1" step="0.2" value="1" onchange="updateOpacity(this.value)">
+    <p> Carden Alvar Slider<input id="slide" type="range" min="0" max="1" step="0.2" value="1" onchange="updateOpacity(this.value)"><p>
+    <hr>
 <!--    
 <div class="navbar">
   <a class="active" href="index.html">Home</a>
