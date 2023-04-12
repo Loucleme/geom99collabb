@@ -115,7 +115,7 @@ initiatives. -->
           boundaries.setStyle({
       fields: ["NAME_E"],
       color: "#A9A9A9",
-      weight: 10,
+      weight: 3,
       opacity: 1,
     
     })
@@ -132,8 +132,9 @@ initiatives. -->
         oldId = e.layer.feature.id;
         document.getElementById("info-pane").innerHTML = e.layer.feature.properties.NAME_E;
         boundaries.setFeatureStyle(e.layer.feature.id, {
-          color: "#296b2f",
-          weight: 2,
+          color: "#ffffff",
+          fill: 1,
+          weight: 3,
           opacity: 1
         });
       });
