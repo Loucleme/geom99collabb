@@ -70,11 +70,13 @@ body {
     font-size: 23px;
     font-weight: bold;
   }
+/*
   .navbar .GeomSolutions {/*Align name/logo left*/
       width: 100%;
       margin-left: 8px;
       margin-top: 8px;
     }
+*/
   .header-image {
     background-position: center;
     background-size: cover;
