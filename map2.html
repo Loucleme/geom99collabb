@@ -48,6 +48,8 @@ Added NCC protected areas layer that was created by querying a protected area GD
 background basemap to imagery since we will be using remote sensing tech and NCC, in general, displays their maps with a imagery background to help with restoration 
 initiatives. -->
   <body>
+    <p> Carden Alvar Slider<p>
+<input id="slide" type="range" min="0" max="1" step="0.2" value="1" onchange="updateOpacity(this.value)">
 <!--    
 <div class="navbar">
   <a class="active" href="index.html">Home</a>
@@ -56,8 +58,11 @@ initiatives. -->
   <a href="map.html">Solution</a>
 </div>
 --> 
+
+   
     <div id="map"></div>
     <div id="info-pane" class="leaflet-bar">Hover to Inspect</div>
+   
     <script>
 
       const apiKey = "AAPK4d7aa34174e8497d8e8d10189e6a88f8B9cgmO9GN1kDtF5i2hkYZr_5OukxG3z6lHj1DrW86ytYkIiWRGhrcXYUHG6-pJls";
@@ -70,21 +75,26 @@ initiatives. -->
         apiKey: apiKey
       }).addTo(map);
       
-      L.esri.tiledMapLayer({
+    var OldCarden = L.esri.tiledMapLayer({
         url: "https://tiles.arcgis.com/tiles/pMeXRvgWClLJZr3s/arcgis/rest/services/Carden1984_WTL1/MapServer",
        apiKey: apiKey,
-        opacity: 0.5
-      }).addTo(map);
+        zoomOffsetAllowance: 0.6,
+        opacity: 1,
+        }).addTo(map);    
+      map.getPane("tilePane").style.zIndex = 500;
       
-      map.getPane("tilePane").style.zIndex = 800;
-      
-            L.esri.tiledMapLayer({
+       var NewCarden = L.esri.tiledMapLayer({
         url: "https://tiles.arcgis.com/tiles/pMeXRvgWClLJZr3s/arcgis/rest/services/Carden2021_WTL1/MapServer",
        apiKey: apiKey,
-        opacity: 0.5
-      }).addTo(map);
-      
-      map.getPane("tilePane").style.zIndex = 800;
+       zoomOffsetAllowance: 0.6,
+        opacity: 1,
+      }).addTo(map);   
+      map.getPane("tilePane").style.zIndex = 500;
+     
+      function updateOpacity(value) {
+        NewCarden.setOpacity(value);
+      }
+
       const boundaries = L.esri
         .featureLayer({
           url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/ProtectedArea_Boundary/FeatureServer/0/",
@@ -131,6 +141,27 @@ initiatives. -->
       var customIcon = L.icon({
         iconUrl: 'https://www.freeiconspng.com/uploads/green-leaf-icon-10.png',
         iconSize: [15,15],
+
+      })
+        
+      
+     // var Carden = L.esri
+       //.featureLayer({
+        // url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/CardenShapefile/FeatureServer/0/"
+       // });
+
+      //Carden.addTo(map); Need to figure out way to display this different from the NCC layers or cant display at all 
+      
+      L.control.scale ({
+        metric: true,
+        imperial: false,
+        position: 'bottomleft'
+      }).addTo(map);
+      
+      var customIcon = L.icon({
+        iconUrl: 'https://www.freeiconspng.com/uploads/green-leaf-icon-10.png',
+        iconSize: [15,15]
+     
 
       })
         
