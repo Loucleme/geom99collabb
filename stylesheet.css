@@ -37,12 +37,11 @@ body {
   .navlist {
     list-style: none;
     float: right;
-    color: #5dacbd; 
-    padding: 10px 14px;
+    color: white; 
     text-decoration: none;
-    font-weight: normal;
+    font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     font-size: 17px;
   }
   .navlist .list_item {
