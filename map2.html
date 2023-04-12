@@ -13,10 +13,16 @@
     <!-- Load Leaflet from CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" crossorigin=""></script>
-
+    
+    <!-- Load Leaflet Plugin for Opacity Control -->
+    <script src="plugin/Leaflet.Control.Opacity/dist/L.Control.Opacity.js"></script>
+    <link href="plugin/Leaflet.Control.Opacity/dist/L.Control.Opacity.css" rel="stylesheet" />
+    
     <!-- Load Esri Leaflet from CDN -->
     <script src="https://unpkg.com/esri-leaflet@3.0.10/dist/esri-leaflet.js"></script>
     <script src="https://unpkg.com/esri-leaflet-vector@4.0.1/dist/esri-leaflet-vector.js"></script>
+    
+
 
     <style>
       body {
@@ -49,7 +55,7 @@ background basemap to imagery since we will be using remote sensing tech and NCC
 initiatives. -->
   <body>
     <p> Carden Alvar Slider<p>
-<input id="slide" type="range" min="0" max="1" step="0.2" value="1" onchange="updateOpacity(this.value)">
+    <input id="slide" type="range" min="0" max="1" step="0.2" value="1" onchange="updateOpacity(this.value)">
 <!--    
 <div class="navbar">
   <a class="active" href="index.html">Home</a>
