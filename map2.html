@@ -13,16 +13,10 @@
     <!-- Load Leaflet from CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" crossorigin=""></script>
-    
-    <!-- Load Leaflet Plugin for Opacity Control -->
-    <script src="plugin/Leaflet.Control.Opacity/dist/L.Control.Opacity.js"></script>
-    <link href="plugin/Leaflet.Control.Opacity/dist/L.Control.Opacity.css" rel="stylesheet" />
-    
+
     <!-- Load Esri Leaflet from CDN -->
     <script src="https://unpkg.com/esri-leaflet@3.0.10/dist/esri-leaflet.js"></script>
     <script src="https://unpkg.com/esri-leaflet-vector@4.0.1/dist/esri-leaflet-vector.js"></script>
-    
-
 
     <style>
       body {
@@ -47,11 +41,10 @@
         padding: 1em;
         background: white;
       }
-      
-      #info-pane2 {
+       #info-pane2 {
         position: absolute;
         top: 10px;
-        left: 10px;
+        right: 10px;
         z-index: 400;
         padding: 1em;
         background: white;
@@ -63,8 +56,8 @@ Added NCC protected areas layer that was created by querying a protected area GD
 background basemap to imagery since we will be using remote sensing tech and NCC, in general, displays their maps with a imagery background to help with restoration 
 initiatives. -->
   <body>
-    <p> Carden Alvar Slider<input id="slide" type="range" min="0" max="1" step="0.2" value="1" onchange="updateOpacity(this.value)"><p>
-    <hr>
+    <p> Carden Alvar Slider<p>
+<input id="slide" type="range" min="0" max="1" step="0.2" value="1" onchange="updateOpacity(this.value)">
 <!--    
 <div class="navbar">
   <a class="active" href="index.html">Home</a>
@@ -96,7 +89,7 @@ initiatives. -->
         zoomOffsetAllowance: 0.6,
         opacity: 1,
         }).addTo(map);    
-      map.getPane("tilePane").style.zIndex = 500;
+      map.getPane("tilePane").style.zIndex = 450;
       
        var NewCarden = L.esri.tiledMapLayer({
         url: "https://tiles.arcgis.com/tiles/pMeXRvgWClLJZr3s/arcgis/rest/services/Carden2021_WTL1/MapServer",
@@ -104,25 +97,31 @@ initiatives. -->
        zoomOffsetAllowance: 0.6,
         opacity: 1,
       }).addTo(map);   
-      map.getPane("tilePane").style.zIndex = 500;
+      map.getPane("tilePane").style.zIndex = 450;
      
       function updateOpacity(value) {
         NewCarden.setOpacity(value);
       }
 
-      const boundaries = L.esri
+      map.createPane("Boundaries");
+    
+       const boundaries = L.esri
         .featureLayer({
-          url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/ProtectedArea_Boundary/FeatureServer/0/",
-          simplifyFactor: 0.35,
+          url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/NCCProperties_WFL1/FeatureServer/0/",
+          apiKey: apiKey,      
           precision: 5,
-          fields: ["NAME_E"],
-          style: {
-            color: "#A9A9A9",
-            weight: 1
-          }
+          pane: "Boundaries",
+          simplifyFactor: 1,
         })
+          boundaries.setStyle({
+      fields: ["NAME_E"],
+      color: "#A9A9A9",
+      weight: 10,
+      opacity: 1,
+    
+    })
         .addTo(map);
-      
+  map.getPane("Boundaries").style.zIndex = 650;  
       
       let oldId;
         boundaries.on("mouseout", function (e) {
@@ -158,28 +157,7 @@ initiatives. -->
         iconSize: [15,15],
 
       })
-        
-      
-     // var Carden = L.esri
-       //.featureLayer({
-        // url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/arcgis/rest/services/CardenShapefile/FeatureServer/0/"
-       // });
 
-      //Carden.addTo(map); Need to figure out way to display this different from the NCC layers or cant display at all 
-      
-      L.control.scale ({
-        metric: true,
-        imperial: false,
-        position: 'bottomleft'
-      }).addTo(map);
-      
-      var customIcon = L.icon({
-        iconUrl: 'https://www.freeiconspng.com/uploads/green-leaf-icon-10.png',
-        iconSize: [15,15]
-     
-
-      })
-        
       var marker = L.marker([44.6657, -79.0353], {icon: customIcon}).addTo(map);
       marker.bindPopup("<b> Cedarhurst - NCC Property 140903 </b><br>This is a test.");      
       
