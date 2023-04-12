@@ -61,22 +61,16 @@ body {
     color:  white; 
   }
   .navbar .CompanyLogo {
-    height: 40px;
+    height: 60px;
   }
   .navbar .CompanyName {
     color: #e0ebeb; 
     text-decoration: none;
     letter-spacing: 2px;
-    font-size: 23px;
+    font-size: 26px;
     font-weight: bold;
   }
-/*
-  .navbar .GeomSolutions {/*Align name/logo left*/
-      width: 100%;
-      margin-left: 8px;
-      margin-top: 8px;
-    }
-*/
+
   .header-image {
     background-position: center;
     background-size: cover;
