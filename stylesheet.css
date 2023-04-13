@@ -108,6 +108,7 @@ body {
      color: seashell;
      display: flex;
      justify-content: center;
+     align-items: center;
   }
   
   .footerText {
@@ -187,7 +188,6 @@ body {
 .buttonPosition {
     display: flex;
     justify-content: center;
-    position: absolute;
     bottom: 100px;
     
 }
