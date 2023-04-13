@@ -71,7 +71,41 @@
     <p></p>
     <p></p>
     <h2> Phase 2 - Add Raster Tiles </h2>
-    <p></p>
+<p>- Begin with adding the raster tiles downloaded from USGS and publish them to agol from arcGIS Pro </p>
+<p> 1st image is from Landsat 5 July 24, 1984 path 17 and row 29.
+    2nd image is from Landsat 8 May 27th, 2021, path 17 and row 29 aswell. </p>
+
+<p> Inserting the tiles into the map requires to use the esri <b>tiled map layer function </b> from leaflet and
+   use the rest services url for the desired tile. </p>
+   
+<p><b> Problem:</b> The tile would not appear on the map. </p>
+<p><b> QuickFix:</b>  it was required to use the leaflet <b>get pane function</b> and setting the z-index so
+            it displays above the basemap.</p>
+    
+<p><b>	Problem:</b> Now the tile is visible, however zooming in and out would make the tile dissappear completely. </p>
+<p><b>	 QuickFix:</b> It was required to set the <b>zoom offset allowance</b> to a larger number (deafult is 0.1) so with trial and error 0.6 was the 
+	  proper offset to have the tile to display when zooming in or out. </p>
+    
+<p><b>	Problem:</b> Now the tile would display however, it was hiding the boundaries feature class as it was layered on top of it.</p>
+<p><b>	QuickFix:</b>  1.creating a pane with leaflets <b>create pane</b> feature for the boundaries </p>
+ 	      <p>    2. Then including a pane section in the created feature layer for boundaries and setting it to it.</p>
+	      <p>    3. Using that pane, use the <b>get pane function</b> again and setting the z-index to a higher value than the tile. </p>
+
+    <p> Adding in the 2nd tile and replicating what was done for tile 1 resulted in no issues. </p>
+
+<p><b> Problem:</b> Creating an <b>opacity slider</b> for the two tiles. </p>
+<p><b> Quick Fix:</b> 1. Creating a function to update the opacity for just 1 tile is necessary to display the changes
+	                  over time.  </p>
+			<p>	2. Turn the desired tile into a variable </p>
+			<p> 3. Use that variable and tie it with the <b>set Opacity</b> within the created function. </p>
+			<p>	4. Have the slider appear on the page with html. </p>
+				<p>	- This is done by using <b>input</b>, setting the id to leaflets built in css library for sliders </p>
+				<p>	- Then setting the type of slider to range, the min and max values, the increment you want the slider
+					  to move and setting the value to where you want the slider to be when opening the map. </p>
+				<p> - Make sure to include  "value" in the parentheses in the function </p>
+				<p>	- Then finally referencing the function. </p>
+		<p>	VOILA, the slider for the referenced tile is visible and movable. </p>
+	  
   </div>  
    
    <h1> Step 3: Create AGOL Dashboard </h1>
