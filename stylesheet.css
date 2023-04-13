@@ -215,7 +215,13 @@ April 6, 2023 */
         background-color: white;
         color: black;
     }
-        
+  .TrialsImages {
+      text-align: center;
+      height: auto;
+      width: 100%;
+      display: flex;
+   }  
+
  .gifBoundaries {
      width:100%;
      height:0;
