@@ -57,7 +57,8 @@ body {
   }
   .navlist a.active {
     background-color: #145DA0;
-    color:  white; 
+    color:  white;
+    padding: 18px;
   }
   .navbar .CompanyLogo {
     height: 60px;
@@ -69,6 +70,11 @@ body {
     font-size: 26px;
     font-weight: bold;
   }
+  /*End of navbar basics for navbar by Jessica Murdoch*/
+
+/* Header image was created with inspiration from w3schools https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_startup
+created by Jessica and edited by Louise
+April 6, 2023 */
 
   .header-image {
     background-position: center;
@@ -90,7 +96,7 @@ body {
     justify-content: center;
     padding-bottom: 100px;
   }
-  /*End of navbar basics for navbar by Jessica Murdoch*/
+/*end of header image*/
   
   .sliderPara {
     color: gray;
