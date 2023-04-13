@@ -80,7 +80,7 @@ initiatives. -->
     <div id="info-pane" class="leaflet-bar">Hover to Inspect</div>
    <script>
      
-<!-- Begin Javascript Code for Map-->
+<!-- Begin Javascript Code for Map -->
       const apiKey = "AAPK4d7aa34174e8497d8e8d10189e6a88f8B9cgmO9GN1kDtF5i2hkYZr_5OukxG3z6lHj1DrW86ytYkIiWRGhrcXYUHG6-pJls";
       const basemapEnum = "ArcGIS:LightGray:Base";
       const map = L.map("map", {
@@ -119,7 +119,7 @@ initiatives. -->
           apiKey: apiKey,      
           precision: 5,
           pane: "Boundaries",
-          simplifyFactor: 1,
+          simplifyFactor: .5,
         })
           boundaries.setStyle({
       fields: ["NAME_E"],
