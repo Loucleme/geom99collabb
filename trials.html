@@ -70,7 +70,7 @@
   <h1> Step 2: Create Leaflet Map </h1>
   
   <div class = "bodybox"> 
-     <h2> Phase 1 - </h2>
+     <h2> Phase 1 - Building Feature Class for Boundaries</h2>
 	  <p><b>Problem:</b> The boundaries would dance around the area depending on the zoom or where the cursor was.</p>
 	  <p><b>QuickFix:</b> The way the style was inserted in the feature class somehow caused it to malfunction and appeared to be the source of the problem. Changing 
 	  it from style { } within the feature class to seperating it out of the featureclass itself but adding it afterwards as <b>"featureclassname.setStyle{"</b> allowed it
