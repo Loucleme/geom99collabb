@@ -236,7 +236,7 @@ html {
   img {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: auto;
     height: auto;
    
   }
