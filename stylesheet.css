@@ -34,6 +34,7 @@ body {
     justify-content: space-around;
     align-items: center;
     z-index: 1000;
+    position: relative;
   }
   .navlist {
     list-style: none;
