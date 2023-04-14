@@ -167,11 +167,13 @@ html {
 /* End of About Us Page */
 
   .sliderPara {
-    color: gray;
+    color: white;
     font-size: 20px;
     font-family: Arial, sans-serif;
     line-height: 155%;
     padding-left: 35px;
+    z-index: 1000;
+    position: absolute;
 }
 
   .footerFixed {
