@@ -309,13 +309,17 @@ html {
   
   }
 
- @media  (min-width: 551px){ /*Responsive */
+ @media screen and (min-width: 551px){ /*Responsive */
       .header-image-text{
           font-size: 1.25rem;
+          width: 100%;
+          display: block;
         }
      
-  @media (max-width: 550px){ /*Responsive */
+  @media screen and (max-width: 550px){ /*Responsive */
       .header-image-text{
+          width: 100%;
+          display: block;
           font-size: .50em;
         }
 
