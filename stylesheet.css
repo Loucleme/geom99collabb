@@ -233,8 +233,10 @@ html {
   }
   
   img {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
    
   }
   
@@ -295,10 +297,11 @@ html {
      height:auto;
      position:relative;
      text-align: center;
+     overflow: hidden;
   }   
      
     @media (max-width: 1400px){ /*Responsive */
-      .bodybox, .gifBoundaries, .TrialsImages{
+      .bodybox {
           flex-direction: column;
         }}
   
