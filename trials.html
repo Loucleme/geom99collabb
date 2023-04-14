@@ -72,7 +72,7 @@
 	  <p><b>QuickFix:</b> The way the style was inserted in the feature class somehow caused it to malfunction and appeared to be the source of the problem. Changing 
 	  it from style { } within the feature class to seperating it out of the featureclass itself but adding it afterwards as <b>"featureclassname.setStyle{"</b> allowed it
 	  to stop dancing around the area.</p>
-     <div>	  
+     <div class ="gifBoundaries">	  
          <iframe src="https://giphy.com/embed/4Vuy9NhOU40uTm7UnG" width="270" height="480"> </iframe>
      </div>
 	  
@@ -83,28 +83,32 @@
 	  from leaflet and use the rest services url for the desired tile. </p>
   
      <p><b> Problem:</b> The tile would not appear on the map. </p>
-     <div> 
+     <div class ="TrialsImages"> 
 	 <img src= "noTile.jpg" alt = "No Tile on Map" width = "301" height= "270">
-     </div>        
+     </div>           
+
      <p><b> QuickFix:</b> It was required to use the leaflet <b>get pane function</b> and setting the z-index so
             it displays above the basemap.</p>
     
      <p><b>  Problem:</b> Now the tile is visible, however zooming in and out would make the tile dissappear completely. </p>
-     <p><b>  QuickFix:</b> It was required to set the <b>zoom offset allowance</b> to a larger number (deafult is 0.1) so with trial and error 0.6 was the 
+       <div class = "gifBoundaries">
+	  <iframe src="https://giphy.com/embed/KdU3A3BuYxTxdYVzFs" width="480" height="270"></iframe><p>
+       </div>
+	  <p><b>  QuickFix:</b> It was required to set the <b>zoom offset allowance</b> to a larger number (deafult is 0.1) so with trial and error 0.6 was the 
 	         proper offset to have the tile to display when zooming in or out. </p>
 
      <p><b>Problem:</b> Now the tile would display however, it was hiding the boundaries feature class as it was layered on top of it.</p>
-     <div>   
+     <div class ="TrialsImages">   
 	 <img src= "noBoundaries.jpg" alt = "Properties Not visible on Map" width = "688" height= "533">
      </div> 
-     <p><b> QuickFix: Getting the Boundaries to Display:</b>  
+	  <p><b> QuickFix:</b> Getting the Boundaries to Display:</p>
 	 <ol>
 	   <li> creating a pane with leaflets <b>create pane</b> feature for the boundaries. </li>
  	   <li> Then including a pane section in the created feature layer for boundaries and setting it to it. </li>
 	   <li> Using that pane, use the <b>get pane function</b> again and setting the z-index to a higher value than the tile. </li>
 	 </ol>
-     <div>  
-        <img src= "showsBoundaries.jpg" alt = "Properties Not visible on Map" width = "523" height= "485">
+     <div class ="TrialsImages">  
+        <img src= "VisibleProperties.jpg" alt = "Properties visible on Map" width = "742" height= "542">
      </div> 
      <p> Adding in the 2nd tile and replicating what was done for tile 1 resulted in no issues. </p>
 
@@ -120,9 +124,14 @@
 	      to move and setting the value to where you want the slider to be when opening the map. </dd>
 	<dd> - Make sure to include  "value" in the parentheses in the function.</dd>
 	<dd>- Then finally referencing the function. </dd>
-     </ol>	
+     </ol>
+	<div class = "TrialsImages">
+	 <img src= "Carden1984.jpg" alt = "Carden1984 with slider" width = "373" height= "220"><img src= "Carden2021.jpg" alt = "Carden1984 with slider" width = "373" height= "220">
+	</div>
      <p>VOILA, the slider for the referenced tile is visible and movable. </p>
-   
+   <div class = "gifBoundaries">
+	   <iframe src="https://giphy.com/embed/zt7skeTS02rcBejwld" width="480" height="270"></iframe>
+    </div>
 </div>   
 	
    <h1> Step 3: Create AGOL Dashboard </h1>
