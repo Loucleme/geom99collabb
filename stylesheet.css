@@ -63,6 +63,7 @@ body {
   }
   .navbar .CompanyLogo {
     height: 60px;
+    width: 90px;
   }
   .navbar .CompanyName {
     color: #e0ebeb; 
@@ -237,7 +238,7 @@ html {
   img {
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 100%;
     height: auto;
    
   }
