@@ -247,8 +247,9 @@ html {
   
   .column {
         float: left;
-        width: 33%;
-      padding-left:1%;
+        width: 30.33%;
+      padding-left:8%;
+      color: white;
   
   }
   
