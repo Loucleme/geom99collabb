@@ -89,6 +89,7 @@ April 6, 2023 */
    /* make responsive*/
     width: 100%;
     height: auto;  
+    line-height: 29em;
   }
   
   .header-image-text {
