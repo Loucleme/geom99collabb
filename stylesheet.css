@@ -322,10 +322,11 @@ html {
       .header-image-text{
           font-size: 1.25rem;
         }
+}
      
   @media screen and (max-width: 550px){ /*Responsive */
       .header-image-text{
           font-size: .25em;
       }
-  
+     }
 
