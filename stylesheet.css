@@ -326,7 +326,6 @@ html {
   @media screen and (max-width: 550px){ /*Responsive */
       .header-image-text{
           font-size: .25em;
-        }
-
+      }
   
 
