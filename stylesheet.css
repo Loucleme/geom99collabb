@@ -33,6 +33,7 @@ body {
     overflow: hidden;
     justify-content: space-around;
     align-items: center;
+    z-index: 1000;
   }
   .navlist {
     list-style: none;
